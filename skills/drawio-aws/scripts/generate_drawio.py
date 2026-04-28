@@ -108,7 +108,7 @@ def parse_architecture(data: dict) -> Architecture:
 
 # (service_key) -> (resIcon, fillColor)
 SHAPES = {
-    "lambda":          ("mxgraph.aws4.lambda",                    "#E7157B"),
+    "lambda":          ("mxgraph.aws4.lambda",                    "#ED7100"),  # Compute
     "api-gateway":     ("mxgraph.aws4.api_gateway",               "#E7157B"),
     "s3":              ("mxgraph.aws4.s3",                        "#3F8624"),
     "rds":             ("mxgraph.aws4.rds",                       "#C7131F"),
@@ -133,14 +133,15 @@ SHAPES = {
     "sns":             ("mxgraph.aws4.sns",                       "#E7157B"),
     "eventbridge":     ("mxgraph.aws4.eventbridge",               "#E7157B"),
     "step-functions":  ("mxgraph.aws4.step_functions",            "#E7157B"),
-    "kinesis":         ("mxgraph.aws4.kinesis_data_streams",      "#E7157B"),
+    "kinesis":         ("mxgraph.aws4.kinesis_data_streams",      "#8C4FFF"),  # Analytics
     "cloudwatch":      ("mxgraph.aws4.cloudwatch",                "#E7157B"),
     "cloudtrail":      ("mxgraph.aws4.cloudtrail",                "#E7157B"),
     "codepipeline":    ("mxgraph.aws4.codepipeline",              "#ED7100"),
     "codebuild":       ("mxgraph.aws4.codebuild",                 "#ED7100"),
     "codedeploy":      ("mxgraph.aws4.codedeploy",                "#ED7100"),
     "glue":            ("mxgraph.aws4.glue",                      "#8C4FFF"),
-    "athena":          ("mxgraph.aws4.athena",                    "#E7157B"),
+    "athena":          ("mxgraph.aws4.athena",                    "#8C4FFF"),  # Analytics
+    "connect":         ("mxgraph.aws4.connect",                   "#E7157B"),
 }
 
 _NODE_STYLE_TEMPLATE = (
@@ -199,10 +200,12 @@ def compute_layout(nodes, edges):
     while queue:
         nid = queue.pop(0)
         for succ in successors.get(nid, []):
-            col[succ] = max(col.get(succ, 0), col[nid] + 1)
             if succ not in visited:
+                col[succ] = max(col.get(succ, 0), col[nid] + 1)
                 visited.add(succ)
                 queue.append(succ)
+            # Back-edges (cycles) are skipped: already-visited nodes
+            # keep their column from the forward traversal.
 
     # Assign any isolated nodes (no edges) to column 0
     for nid in node_ids:
@@ -230,8 +233,6 @@ PAGE_HEIGHT = 827
 
 _EDGE_STYLE = (
     "edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000;"
-    "exitX=1;exitY=0.5;exitDx=0;exitDy=0;"
-    "entryX=0;entryY=0.5;entryDx=0;entryDy=0;"
 )
 
 _GROUP_STYLES = {

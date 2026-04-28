@@ -12,7 +12,7 @@ shape=mxgraph.aws4.resourceIcon;resIcon={SHAPE};
 
 | Service key | resIcon | fillColor | Category |
 |-------------|---------|-----------|----------|
-| `lambda` | `mxgraph.aws4.lambda` | `#E7157B` | Compute |
+| `lambda` | `mxgraph.aws4.lambda` | `#ED7100` | Compute |
 | `api-gateway` | `mxgraph.aws4.api_gateway` | `#E7157B` | Integration |
 | `s3` | `mxgraph.aws4.s3` | `#3F8624` | Storage |
 | `rds` | `mxgraph.aws4.rds` | `#C7131F` | Database |
@@ -37,14 +37,15 @@ shape=mxgraph.aws4.resourceIcon;resIcon={SHAPE};
 | `sns` | `mxgraph.aws4.sns` | `#E7157B` | Integration |
 | `eventbridge` | `mxgraph.aws4.eventbridge` | `#E7157B` | Integration |
 | `step-functions` | `mxgraph.aws4.step_functions` | `#E7157B` | Integration |
-| `kinesis` | `mxgraph.aws4.kinesis_data_streams` | `#E7157B` | Integration |
+| `kinesis` | `mxgraph.aws4.kinesis_data_streams` | `#8C4FFF` | Analytics |
 | `cloudwatch` | `mxgraph.aws4.cloudwatch` | `#E7157B` | Management |
 | `cloudtrail` | `mxgraph.aws4.cloudtrail` | `#E7157B` | Management |
 | `codepipeline` | `mxgraph.aws4.codepipeline` | `#ED7100` | DevTools |
 | `codebuild` | `mxgraph.aws4.codebuild` | `#ED7100` | DevTools |
 | `codedeploy` | `mxgraph.aws4.codedeploy` | `#ED7100` | DevTools |
 | `glue` | `mxgraph.aws4.glue` | `#8C4FFF` | Analytics |
-| `athena` | `mxgraph.aws4.athena` | `#E7157B` | Analytics |
+| `athena` | `mxgraph.aws4.athena` | `#8C4FFF` | Analytics |
+| `connect` | `mxgraph.aws4.connect` | `#E7157B` | Contact Center |
 
 ## Group Container Styles
 

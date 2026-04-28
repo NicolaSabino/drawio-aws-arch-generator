@@ -1,0 +1,46 @@
+{
+  "title": "aws-connect-outbound-campaign",
+  "nodes": [
+    { "id": "eventbridge-scheduler",      "service": "eventbridge" },
+    { "id": "lambda-campaign-starter",    "service": "lambda" },
+    { "id": "connect-instance",           "service": "connect" },
+    { "id": "kinesis-ctr-stream",         "service": "kinesis" },
+    { "id": "lambda-result-processor",    "service": "lambda" },
+    { "id": "dynamodb-campaign-results",  "service": "dynamodb" },
+    { "id": "lambda-retry-handler",       "service": "lambda" },
+    { "id": "s3-contact-list",            "service": "s3" },
+    { "id": "sqs-retry-queue",            "service": "sqs" },
+    { "id": "cloudwatch-monitoring",      "service": "cloudwatch" }
+  ],
+  "edges": [
+    { "from": "eventbridge-scheduler",     "to": "lambda-campaign-starter",   "label": "Schedule trigger" },
+    { "from": "lambda-campaign-starter",   "to": "s3-contact-list",           "label": "Read contacts" },
+    { "from": "lambda-campaign-starter",   "to": "connect-instance",          "label": "Start calls" },
+    { "from": "connect-instance",          "to": "kinesis-ctr-stream",        "label": "Stream CTRs" },
+    { "from": "kinesis-ctr-stream",        "to": "lambda-result-processor",   "label": "Process" },
+    { "from": "lambda-result-processor",   "to": "dynamodb-campaign-results", "label": "Save disposition" },
+    { "from": "lambda-result-processor",   "to": "sqs-retry-queue",           "label": "Queue retry" },
+    { "from": "sqs-retry-queue",           "to": "lambda-retry-handler",      "label": "Trigger retry" },
+    { "from": "lambda-retry-handler",      "to": "connect-instance",          "label": "Re-initiate" },
+    { "from": "connect-instance",          "to": "cloudwatch-monitoring",     "label": "Metrics" }
+  ],
+  "groups": [
+    {
+      "id": "aws-region",
+      "type": "region",
+      "label": "aws-region",
+      "contains": [
+        "eventbridge-scheduler",
+        "s3-contact-list",
+        "lambda-campaign-starter",
+        "connect-instance",
+        "kinesis-ctr-stream",
+        "lambda-result-processor",
+        "dynamodb-campaign-results",
+        "sqs-retry-queue",
+        "lambda-retry-handler",
+        "cloudwatch-monitoring"
+      ]
+    }
+  ]
+}
