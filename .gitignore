@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.drawio.bak
+.DS_Store
+.superpowers/
+*.egg-info/
+dist/
+.pytest_cache/
