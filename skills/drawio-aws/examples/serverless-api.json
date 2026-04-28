@@ -1,0 +1,28 @@
+{
+  "title": "serverless-api",
+  "nodes": [
+    { "id": "route53-main",      "service": "route53" },
+    { "id": "cloudfront-cdn",    "service": "cloudfront" },
+    { "id": "api-gateway-main",  "service": "api-gateway" },
+    { "id": "lambda-get-user",   "service": "lambda" },
+    { "id": "lambda-post-order", "service": "lambda" },
+    { "id": "dynamodb-users",    "service": "dynamodb" },
+    { "id": "s3-file-storage",   "service": "s3" }
+  ],
+  "edges": [
+    { "from": "route53-main",      "to": "cloudfront-cdn" },
+    { "from": "cloudfront-cdn",    "to": "api-gateway-main" },
+    { "from": "api-gateway-main",  "to": "lambda-get-user" },
+    { "from": "api-gateway-main",  "to": "lambda-post-order" },
+    { "from": "lambda-get-user",   "to": "dynamodb-users" },
+    { "from": "lambda-post-order", "to": "s3-file-storage" }
+  ],
+  "groups": [
+    {
+      "id": "vpc-main",
+      "type": "vpc",
+      "label": "vpc-main",
+      "contains": ["lambda-get-user", "lambda-post-order", "dynamodb-users"]
+    }
+  ]
+}

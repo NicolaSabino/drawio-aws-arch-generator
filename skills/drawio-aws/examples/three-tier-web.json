@@ -1,0 +1,28 @@
+{
+  "title": "three-tier-web",
+  "nodes": [
+    { "id": "route53-main",      "service": "route53" },
+    { "id": "waf-main",          "service": "waf" },
+    { "id": "alb-public",        "service": "alb" },
+    { "id": "ecs-app-service",   "service": "ecs" },
+    { "id": "rds-postgres-main", "service": "rds" },
+    { "id": "elasticache-redis", "service": "elasticache" },
+    { "id": "s3-assets",         "service": "s3" }
+  ],
+  "edges": [
+    { "from": "route53-main",     "to": "waf-main" },
+    { "from": "waf-main",         "to": "alb-public" },
+    { "from": "alb-public",       "to": "ecs-app-service" },
+    { "from": "ecs-app-service",  "to": "rds-postgres-main" },
+    { "from": "ecs-app-service",  "to": "elasticache-redis" },
+    { "from": "ecs-app-service",  "to": "s3-assets" }
+  ],
+  "groups": [
+    {
+      "id": "vpc-main",
+      "type": "vpc",
+      "label": "vpc-main",
+      "contains": ["alb-public", "ecs-app-service", "rds-postgres-main", "elasticache-redis"]
+    }
+  ]
+}
