@@ -13,8 +13,8 @@ with official AWS icons, consistent layout, and enforced visual rules.
 ## Installation in Claude Code
 
 ```bash
-/plugin marketplace add <your-github-user>/skill-drawio
-/plugin install drawio-aws@skill-drawio
+/plugin marketplace add NicolaSabino/drawio-aws-arch-generator
+/plugin install drawio-aws@drawio-aws-arch-generator
 ```
 
 ## Usage
