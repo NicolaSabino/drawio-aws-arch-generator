@@ -1,0 +1,22 @@
+{
+  "name": "drawio-aws-arch-generator",
+  "owner": {
+    "name": "Nicola Sabino",
+    "email": "nicola.sabino94@gmail.com"
+  },
+  "metadata": {
+    "description": "Claude Code skill for generating consistent AWS architecture diagrams in draw.io format",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "drawio-aws",
+      "description": "Generate visually consistent AWS architecture diagrams as .drawio files from a free-text description. Uses official AWS icons (mxgraph.aws4 stencil pack).",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/drawio-aws"
+      ]
+    }
+  ]
+}
