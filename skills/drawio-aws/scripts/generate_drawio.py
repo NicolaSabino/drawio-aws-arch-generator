@@ -168,7 +168,7 @@ V_GAP = 60     # vertical gap between node edges
 H_STEP = ICON_SIZE + H_GAP   # 130 px per column
 V_STEP = ICON_SIZE + V_GAP   # 110 px per row
 PADDING_LEFT = 80
-PADDING_TOP = 100   # reserved for title
+PADDING_TOP = 160   # reserved for title (title ends at ~y=70; groups top = PADDING_TOP-55)
 
 
 # ---------------------------------------------------------------------------
@@ -261,6 +261,7 @@ _GROUP_STYLES = {
 }
 
 _GROUP_PADDING = 30   # padding inside group container around nodes
+_LABEL_HEIGHT = 25   # height of label rendered below the icon
 
 
 def _group_bounds(contains, positions):
@@ -272,7 +273,7 @@ def _group_bounds(contains, positions):
     x = min(xs) - _GROUP_PADDING
     y = min(ys) - _GROUP_PADDING - 25   # extra space for label at top
     w = max(xs) - min(xs) + ICON_SIZE + _GROUP_PADDING * 2
-    h = max(ys) - min(ys) + ICON_SIZE + _GROUP_PADDING * 2 + 25
+    h = max(ys) - min(ys) + ICON_SIZE + _LABEL_HEIGHT + _GROUP_PADDING * 2 + 25
     return (x, y, w, h)
 
 
