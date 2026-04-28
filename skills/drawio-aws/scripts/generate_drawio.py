@@ -147,6 +147,7 @@ _NODE_STYLE_TEMPLATE = (
     "outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;"
     "fillColor={fill};labelBackgroundColor=#ffffff;align=center;html=1;"
     "fontSize=12;fontStyle=0;aspect=fixed;"
+    "verticalLabelPosition=bottom;verticalAlign=top;"
     "shape=mxgraph.aws4.resourceIcon;resIcon={res};"
 )
 
