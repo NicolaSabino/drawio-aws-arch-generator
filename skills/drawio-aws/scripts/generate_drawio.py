@@ -164,12 +164,12 @@ def get_node_style(service: str) -> str:
 # ---------------------------------------------------------------------------
 
 ICON_SIZE = 50
-H_GAP = 80     # horizontal gap between node edges
-V_GAP = 60     # vertical gap between node edges
-H_STEP = ICON_SIZE + H_GAP   # 130 px per column
-V_STEP = ICON_SIZE + V_GAP   # 110 px per row
-PADDING_LEFT = 80
-PADDING_TOP = 160   # reserved for title (title ends at ~y=70; groups top = PADDING_TOP-55)
+H_GAP = 140    # horizontal gap between node edges
+V_GAP = 100    # vertical gap between node edges
+H_STEP = ICON_SIZE + H_GAP   # 190 px per column
+V_STEP = ICON_SIZE + V_GAP   # 150 px per row
+PADDING_LEFT = 100
+PADDING_TOP = 180   # reserved for title (title ends at ~y=70; groups top = PADDING_TOP-55)
 
 
 # ---------------------------------------------------------------------------

@@ -6,37 +6,37 @@
       <mxGeometry x="0" y="20" width="1169" height="50" as="geometry" />
     </mxCell>
     <mxCell id="aws-region" value="aws-region" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#147EBA;fillColor=#E6F2F8;verticalLabelPosition=top;verticalAlign=bottom;align=center;spacingTop=25;fontColor=#147EBA;dashed=1;" vertex="1" parent="1">
-      <mxGeometry x="50" y="105" width="890" height="270" as="geometry" />
+      <mxGeometry x="70" y="125" width="1250" height="310" as="geometry" />
     </mxCell>
     <mxCell id="eventbridge-scheduler" value="eventbridge-scheduler" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.eventbridge;" vertex="1" parent="aws-region">
       <mxGeometry x="30" y="55" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="lambda-campaign-starter" value="lambda-campaign-starter" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#ED7100;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="aws-region">
-      <mxGeometry x="160" y="55" width="50" height="50" as="geometry" />
+      <mxGeometry x="220" y="55" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="connect-instance" value="connect-instance" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.connect;" vertex="1" parent="aws-region">
-      <mxGeometry x="290" y="55" width="50" height="50" as="geometry" />
+      <mxGeometry x="410" y="55" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="kinesis-ctr-stream" value="kinesis-ctr-stream" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#8C4FFF;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.kinesis_data_streams;" vertex="1" parent="aws-region">
-      <mxGeometry x="420" y="55" width="50" height="50" as="geometry" />
+      <mxGeometry x="600" y="55" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="lambda-result-processor" value="lambda-result-processor" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#ED7100;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="aws-region">
-      <mxGeometry x="550" y="55" width="50" height="50" as="geometry" />
+      <mxGeometry x="790" y="55" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="dynamodb-campaign-results" value="dynamodb-campaign-results" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#C7131F;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="aws-region">
-      <mxGeometry x="680" y="55" width="50" height="50" as="geometry" />
+      <mxGeometry x="980" y="55" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="lambda-retry-handler" value="lambda-retry-handler" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#ED7100;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="aws-region">
-      <mxGeometry x="810" y="55" width="50" height="50" as="geometry" />
+      <mxGeometry x="1170" y="55" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="s3-contact-list" value="s3-contact-list" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#3F8624;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="aws-region">
-      <mxGeometry x="290" y="165" width="50" height="50" as="geometry" />
+      <mxGeometry x="410" y="205" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="sqs-retry-queue" value="sqs-retry-queue" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="aws-region">
-      <mxGeometry x="680" y="165" width="50" height="50" as="geometry" />
+      <mxGeometry x="980" y="205" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="cloudwatch-monitoring" value="cloudwatch-monitoring" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=none;fillColor=#E7157B;labelBackgroundColor=#ffffff;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="aws-region">
-      <mxGeometry x="420" y="165" width="50" height="50" as="geometry" />
+      <mxGeometry x="600" y="205" width="50" height="50" as="geometry" />
     </mxCell>
     <mxCell id="edge_eventbridge-scheduler_lambda-campaign-starter" value="Schedule trigger" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000;" edge="1" source="eventbridge-scheduler" target="lambda-campaign-starter" parent="1">
       <mxGeometry relative="1" as="geometry" />
